@@ -1,0 +1,49 @@
+:root {
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-size: 1.6rem;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: "Tangerine", cursive;
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* HEADER */
+
+.restaurant-name {
+  font-size: 20rem;
+}
+
+/* MAIN */
+
+/* FOOTER */
