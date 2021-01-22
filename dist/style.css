@@ -21,6 +21,7 @@ body {
   height: 100vh;
   color: white;
   font-family: "Tangerine", cursive;
+  text-align: center;
 }
 
 header {
@@ -40,10 +41,31 @@ img {
 
 /* HEADER */
 
+.header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .restaurant-name {
-  font-size: 20rem;
+  font-size: 8rem;
 }
 
 /* MAIN */
 
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 5rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* FOOTER */
+
+.footer {
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
