@@ -38,6 +38,7 @@ h3 {
 img {
   display: block;
   width: 100%;
+  border-radius: 50%;
 }
 
 /* HEADER */
@@ -60,7 +61,18 @@ img {
   margin: 0 auto;
   margin-top: 40px;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.main p {
+  padding: 10px;
+}
+
+.about-image {
+  width: 80%;
+  margin: 10px auto;
+  opacity: 90%;
+  /* border: 1px solid #111; */
 }
 
 /* FOOTER */
@@ -71,4 +83,10 @@ img {
   width: 100%;
   padding: 10px;
   background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
 }
