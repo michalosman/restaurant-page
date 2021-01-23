@@ -1,6 +1,8 @@
 :root {
   --font-color: #eee;
   --border-color: #222;
+  --light-background: rgba(0, 0, 0, 0.6);
+  --dark-background: rgba(0, 0, 0, 0.9);
 }
 
 *,
@@ -22,16 +24,13 @@ body {
   color: var(--font-color);
   font-family: "Montserrat", cursive;
   font-size: 1.6rem;
-  text-align: center;
 }
 
 header {
   font-size: 2.4rem;
 }
 
-h1,
-h2,
-h3 {
+h1 {
   line-height: 1.2;
 }
 
@@ -39,62 +38,88 @@ img {
   width: 100%;
 }
 
-/* WRAPPER */
+/* Content */
 
-.wrapper {
+.content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 100vh;
+  width: 100vw;
 }
 
-/* HEADER */
+/* Header */
 
 .header {
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 10px;
+  background: var(--dark-background);
+  padding: 1rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.restaurant-name {
+.header h1 {
   font-family: "Tangerine", cursive;
   font-size: 12rem;
+  text-align: center;
 }
 
-/* MAIN */
+/* Main */
 
 .main {
   max-width: 800px;
-  padding: 10px;
-  margin: 30px 0;
-  background: rgba(0, 0, 0, 0.6);
-  font-size: 2rem;
+  padding: 1rem;
   border: 1px solid var(--border-color);
+  margin: 3rem 0;
+  background: var(--light-background);
+  font-size: 2rem;
+  overflow: auto; /* in order to prevent repeating background */
 }
 
-.main p {
-  padding: 10px;
+.about {
+  text-align: center;
 }
 
-.about-image {
+.about p {
+  padding: 1rem;
+}
+
+.about img {
   width: 50%;
-  margin: 10px auto;
+  margin: 1rem auto;
   opacity: 90%;
 }
 
-/* FOOTER */
+/* Footer */
 
 .footer {
   width: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  background: var(--light-background);
   border-top: 1px solid var(--border-color);
+  text-align: center;
 }
 
 @media (max-width: 500px) {
   html {
     font-size: 50%;
   }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 222, 222, 0.4);
 }
