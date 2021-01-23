@@ -38,7 +38,6 @@ h3 {
 img {
   display: block;
   width: 100%;
-  border-radius: 50%;
 }
 
 /* HEADER */
@@ -46,6 +45,7 @@ img {
 .header {
   background: rgba(0, 0, 0, 0.8);
   padding: 10px;
+  border: 2px solid #111;
 }
 
 .restaurant-name {
@@ -57,11 +57,12 @@ img {
 
 .main {
   max-width: 600px;
+  max-height: 80vh;
   padding: 10px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 100px auto;
   background: rgba(0, 0, 0, 0.5);
   font-size: 2rem;
+  border: 2px solid #111;
 }
 
 .main p {
@@ -72,17 +73,17 @@ img {
   width: 80%;
   margin: 10px auto;
   opacity: 90%;
-  /* border: 1px solid #111; */
+  border-radius: 50%;
 }
 
 /* FOOTER */
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
 }
 
 @media (max-width: 500px) {
