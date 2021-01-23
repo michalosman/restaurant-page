@@ -1,5 +1,6 @@
 :root {
   --font-color: #eee;
+  --border-color: #222;
 }
 
 *,
@@ -16,7 +17,6 @@ html {
 }
 
 body {
-  height: 100vh;
   background-image: url("images/background.jpg");
   background-size: cover;
   color: var(--font-color);
@@ -35,17 +35,23 @@ h3 {
   line-height: 1.2;
 }
 
-img {
-  display: block;
-  width: 100%;
+/* WRAPPER */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }
 
 /* HEADER */
 
 .header {
-  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px;
-  border: 2px solid #111;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .restaurant-name {
@@ -56,13 +62,12 @@ img {
 /* MAIN */
 
 .main {
-  max-width: 600px;
-  max-height: 80vh;
+  width: 80%;
   padding: 10px;
-  margin: 100px auto;
-  background: rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+  background: rgba(0, 0, 0, 0.6);
   font-size: 2rem;
-  border: 2px solid #111;
+  border: 1px solid var(--border-color);
 }
 
 .main p {
@@ -70,10 +75,9 @@ img {
 }
 
 .about-image {
-  width: 80%;
+  width: 50%;
   margin: 10px auto;
   opacity: 90%;
-  border-radius: 50%;
 }
 
 /* FOOTER */
@@ -81,9 +85,8 @@ img {
 .footer {
   width: 100%;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  border-top: 2px solid #111;
-  border-bottom: 2px solid #111;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 500px) {
