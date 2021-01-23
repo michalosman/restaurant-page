@@ -1,4 +1,5 @@
 :root {
+  --font-color: #eee;
 }
 
 *,
@@ -15,12 +16,12 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  height: 100vh;
   background-image: url("images/background.jpg");
   background-size: cover;
-  height: 100vh;
-  color: white;
-  font-family: "Tangerine", cursive;
+  color: var(--font-color);
+  font-family: "Montserrat", cursive;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -42,30 +43,32 @@ img {
 /* HEADER */
 
 .header {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
 }
 
 .restaurant-name {
-  font-size: 8rem;
+  font-family: "Tangerine", cursive;
+  font-size: 12rem;
 }
 
 /* MAIN */
 
 .main {
   max-width: 600px;
+  padding: 10px;
   margin: 0 auto;
   margin-top: 40px;
-  font-size: 5rem;
   background: rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
 }
 
 /* FOOTER */
 
 .footer {
-  font-size: 3rem;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
   position: fixed;
   bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
 }
