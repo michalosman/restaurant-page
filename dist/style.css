@@ -21,6 +21,7 @@ html {
 body {
   background-image: url("images/background.jpg");
   background-size: cover;
+  background-attachment: fixed;
   color: var(--font-color);
   font-family: "Montserrat", cursive;
   font-size: 1.6rem;
@@ -46,7 +47,6 @@ img {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  width: 100vw;
 }
 
 /* Header */
@@ -68,12 +68,11 @@ img {
 
 .main {
   max-width: 800px;
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid var(--border-color);
   margin: 3rem 0;
   background: var(--light-background);
   font-size: 2rem;
-  overflow: auto; /* in order to prevent repeating background */
 }
 
 .about {
@@ -113,13 +112,13 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.4);
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(155, 155, 155, 0.4);
+  background: #333;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 222, 222, 0.4);
+  background: #666;
 }
