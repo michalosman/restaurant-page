@@ -1,5 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -9,15 +10,57 @@ function createHeader() {
   restaurantName.textContent = "Mozzafiato";
   header.appendChild(restaurantName);
 
+  header.appendChild(createNav());
+
   return header;
 }
 
 function createNav() {
   const nav = document.createElement("nav");
   nav.classList.add("nav");
+
+  const homeButton = document.createElement("button");
+  homeButton.classList.add("button");
+  homeButton.textContent = "Home";
+  homeButton.addEventListener("click", () => {
+    setActiveButton(homeButton);
+    loadHome();
+  });
+
+  const menuButton = document.createElement("button");
+  menuButton.classList.add("button");
+  menuButton.textContent = "Menu";
+  menuButton.addEventListener("click", () => {
+    setActiveButton(menuButton);
+    loadMenu();
+  });
+
+  const contactButton = document.createElement("button");
+  contactButton.classList.add("button");
+  contactButton.textContent = "Contact";
+  contactButton.addEventListener("click", () => {
+    setActiveButton(contactButton);
+    loadContact();
+  });
+
+  nav.appendChild(homeButton);
+  nav.appendChild(menuButton);
+  nav.appendChild(contactButton);
+
+  return nav;
 }
 
-function createButton(text) {}
+function setActiveButton(button) {
+  const buttons = document.querySelectorAll(".nav .button");
+
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove("active");
+    }
+  });
+
+  button.classList.add("active");
+}
 
 function createMain() {
   const main = document.createElement("main");
@@ -43,7 +86,7 @@ function initializeWebsite() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
-  loadHome();
+  loadMenu();
 }
 
 export default initializeWebsite;
