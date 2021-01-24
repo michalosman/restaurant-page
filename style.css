@@ -3,6 +3,8 @@
   --border-color: #222;
   --light-background: rgba(0, 0, 0, 0.6);
   --dark-background: rgba(0, 0, 0, 0.9);
+  --menu-item-h: rgba(0, 0, 0, 0.6);
+  --menu-item-hover: rgba(99, 99, 99, 0.4);
 }
 
 *,
@@ -40,6 +42,11 @@ img {
   width: 100%;
 }
 
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
 /* Content */
 
 .content {
@@ -53,6 +60,10 @@ img {
 /* Header */
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background: var(--dark-background);
   padding: 1rem;
@@ -62,7 +73,33 @@ img {
 .header h1 {
   font-family: "Tangerine", cursive;
   font-size: 12rem;
-  text-align: center;
+}
+
+/* Nav */
+
+.nav {
+  display: flex;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 2rem;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-10%);
+}
+
+.button.active {
+  border-bottom: 1px solid #fff;
+}
+
+.button:active {
+  border: none;
 }
 
 /* Main */
@@ -71,7 +108,7 @@ img {
   max-width: 800px;
   padding: 4rem;
   border: 1px solid var(--border-color);
-  margin: 3rem 0;
+  margin: 6rem 0;
   background: var(--light-background);
   font-size: 2rem;
 }
@@ -97,8 +134,46 @@ img {
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10rem;
+  grid-gap: 4rem;
+}
+
+.menu-item {
+  text-align: center;
   padding: 4rem;
+  background-color: var(--menu-item);
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: var(--menu-item-hover);
+}
+
+.menu-item img {
+  width: 60%;
+}
+
+.menu-item h2 {
+  font-size: 3rem;
+}
+
+.menu-item p {
+  font-size: 1.5rem;
+}
+
+/* Contact page */
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  padding: 2rem;
+
+  text-align: justify;
+}
+
+.contact img {
+  padding: 2rem;
 }
 
 /* Footer */
