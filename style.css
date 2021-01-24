@@ -87,7 +87,9 @@ button {
   outline: none;
   font-size: 2rem;
   padding: 2rem;
-  transition: 0.2s;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 .button:hover {
@@ -95,7 +97,7 @@ button {
 }
 
 .button.active {
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid var(--font-color);
 }
 
 .button:active {
@@ -168,12 +170,12 @@ button {
 
 .contact p {
   padding: 2rem;
-
   text-align: justify;
 }
 
 .contact img {
   padding: 2rem;
+  width: 90%;
 }
 
 /* Footer */
@@ -184,6 +186,16 @@ button {
   background: var(--light-background);
   border-top: 1px solid var(--border-color);
   text-align: center;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu img {
+    width: 50%;
+  }
 }
 
 @media (max-width: 500px) {
