@@ -89,7 +89,6 @@ function initializeWebsite() {
   loadHome();
 
   const homeButton = document.querySelector("button");
-  console.log(homeButton);
   homeButton.classList.add("active");
 }
 
