@@ -86,7 +86,11 @@ function initializeWebsite() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
-  loadMenu();
+  loadHome();
+
+  const homeButton = document.querySelector("button");
+  console.log(homeButton);
+  homeButton.classList.add("active");
 }
 
 export default initializeWebsite;
