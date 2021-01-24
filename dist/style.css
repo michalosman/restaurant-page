@@ -25,6 +25,7 @@ body {
   color: var(--font-color);
   font-family: "Montserrat", cursive;
   font-size: 1.6rem;
+  overflow: overlay; /* enables transparent crossbar */
 }
 
 header {
@@ -68,25 +69,36 @@ img {
 
 .main {
   max-width: 800px;
-  padding: 2rem;
+  padding: 4rem;
   border: 1px solid var(--border-color);
   margin: 3rem 0;
   background: var(--light-background);
   font-size: 2rem;
 }
 
-.about {
+/* Home page */
+
+.home {
   text-align: center;
 }
 
-.about p {
+.home p {
   padding: 1rem;
 }
 
-.about img {
+.home img {
   width: 50%;
-  margin: 1rem auto;
+  margin: 3rem auto;
   opacity: 90%;
+}
+
+/* Menu page */
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10rem;
+  padding: 4rem;
 }
 
 /* Footer */
@@ -116,9 +128,9 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #222;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #666;
+  background: #444;
 }
