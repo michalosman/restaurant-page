@@ -4,7 +4,7 @@ function createHome() {
 
   const chefImage = document.createElement("img");
   chefImage.src = "images/chef.png";
-  chefImage.alt = "An image of chef";
+  chefImage.alt = "Chef";
 
   home.appendChild(createParagraph("Best pizza in your country"));
   home.appendChild(createParagraph("Made with passion since 1908"));
@@ -17,7 +17,6 @@ function createHome() {
 function createParagraph(text) {
   const paragraph = document.createElement("p");
   paragraph.textContent = text;
-
   return paragraph;
 }
 

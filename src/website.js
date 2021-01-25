@@ -9,8 +9,8 @@ function createHeader() {
   const restaurantName = document.createElement("h1");
   restaurantName.classList.add("restaurant-name");
   restaurantName.textContent = "Mozzafiato";
-  header.appendChild(restaurantName);
 
+  header.appendChild(restaurantName);
   header.appendChild(createNav());
 
   return header;
@@ -66,7 +66,6 @@ function createMain() {
   const main = document.createElement("main");
   main.classList.add("main");
   main.setAttribute("id", "main");
-
   return main;
 }
 
@@ -83,13 +82,13 @@ function createFooter() {
 
 function initializeWebsite() {
   const content = document.getElementById("content");
+
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
-  loadHome();
 
-  const homeButton = document.querySelector(".button-nav");
-  homeButton.classList.add("active");
+  setActiveButton(document.querySelector(".button-nav"));
+  loadHome();
 }
 
 export default initializeWebsite;

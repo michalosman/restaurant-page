@@ -10,7 +10,7 @@ function createContact() {
 
   const restaurantLocation = document.createElement("img");
   restaurantLocation.src = "images/restaurant-location.png";
-  restaurantLocation.alt = "Image of Mozzafiato restaurant location";
+  restaurantLocation.alt = "Mozzafiato restaurant location";
 
   contact.appendChild(phoneNumber);
   contact.appendChild(address);
