@@ -1,11 +1,12 @@
 :root {
   --font-color: #eee;
   --border-color: #222;
-  --light-background: rgba(0, 0, 0, 0.6);
-  --dark-background: rgba(0, 0, 0, 0.9);
-  --menu-item-h: rgba(0, 0, 0, 0.6);
-  --menu-item-hover: rgba(99, 99, 99, 0.4);
+  --background-light: rgba(0, 0, 0, 0.6);
+  --background-light-hover: rgba(99, 99, 99, 0.4);
+  --background-dark: rgba(0, 0, 0, 0.9);
 }
+
+/* General */
 
 *,
 *::before,
@@ -27,24 +28,29 @@ body {
   color: var(--font-color);
   font-family: "Montserrat", cursive;
   font-size: 1.6rem;
-  overflow: overlay; /* enables transparent crossbar */
 }
 
 header {
   font-size: 2.4rem;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   line-height: 1.2;
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
 button {
   font-family: inherit;
   color: inherit;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
 }
 
 /* Content */
@@ -65,60 +71,51 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: var(--dark-background);
-  padding: 1rem;
+  background-color: var(--background-dark);
+  padding: 2rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-.header h1 {
+.restaurant-name {
   font-family: "Tangerine", cursive;
-  font-size: 12rem;
+  font-size: 10rem;
+  margin-bottom: 1rem;
 }
 
-/* Nav */
-
-.nav {
-  display: flex;
-}
-
-.button {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
+.button-nav {
+  background-color: transparent;
   font-size: 2rem;
   padding: 2rem;
-  cursor: pointer;
+  border-bottom: 2px solid transparent;
   transition: 0.3s;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
-.button:hover {
-  transform: translateY(-10%);
-}
-
-.button.active {
+.button-nav.active {
   border-bottom: 2px solid var(--font-color);
 }
 
-.button:active {
-  border: none;
+.button-nav:hover {
+  transform: translateY(-10%);
 }
 
 /* Main */
 
 .main {
-  max-width: 800px;
+  max-width: 900px;
   padding: 4rem;
   border: 1px solid var(--border-color);
   margin: 6rem 0;
-  background: var(--light-background);
+  background-color: var(--background-light);
   font-size: 2rem;
 }
 
 /* Home page */
 
 .home {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home p {
@@ -127,7 +124,8 @@ button {
 
 .home img {
   width: 50%;
-  margin: 3rem auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   opacity: 90%;
 }
 
@@ -140,14 +138,17 @@ button {
 }
 
 .menu-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 4rem;
-  background-color: var(--menu-item);
+  background-color: var(--background-light);
   cursor: pointer;
 }
 
 .menu-item:hover {
-  background-color: var(--menu-item-hover);
+  background-color: var(--background-light-hover);
 }
 
 .menu-item img {
@@ -155,10 +156,12 @@ button {
 }
 
 .menu-item h2 {
+  padding: 2rem;
   font-size: 3rem;
 }
 
 .menu-item p {
+  text-align: center;
   font-size: 1.5rem;
 }
 
@@ -183,7 +186,7 @@ button {
 .footer {
   width: 100%;
   padding: 1rem;
-  background: var(--light-background);
+  background-color: var(--background-light);
   border-top: 1px solid var(--border-color);
   text-align: center;
 }
@@ -211,13 +214,13 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background-color: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background-color: #222;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #444;
+  background-color: #444;
 }
