@@ -22,12 +22,12 @@ html {
 }
 
 body {
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  color: var(--font-color);
   font-family: "Montserrat", cursive;
   font-size: 1.6rem;
+  color: var(--font-color);
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 header {
@@ -48,9 +48,9 @@ img {
 button {
   font-family: inherit;
   color: inherit;
+  cursor: pointer;
   border-style: none;
   outline: none;
-  cursor: pointer;
 }
 
 /* Content */
@@ -68,24 +68,24 @@ button {
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  background-color: var(--background-dark);
   padding: 2rem;
+  background-color: var(--background-dark);
   border-bottom: 1px solid var(--border-color);
 }
 
 .restaurant-name {
+  margin-bottom: 1rem;
   font-family: "Tangerine", cursive;
   font-size: 10rem;
-  margin-bottom: 1rem;
 }
 
 .button-nav {
-  background-color: transparent;
-  font-size: 2rem;
   padding: 2rem;
+  font-size: 2rem;
+  background-color: transparent;
   border-bottom: 2px solid transparent;
   transition: 0.3s;
 }
@@ -103,10 +103,10 @@ button {
 .main {
   max-width: 700px;
   padding: 4rem;
-  border: 1px solid var(--border-color);
   margin: 6rem 0;
-  background-color: var(--background-light);
   font-size: 2rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
 }
 
 /* Home page */
@@ -114,8 +114,8 @@ button {
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .home p {
@@ -140,12 +140,12 @@ button {
 .menu-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 300px;
   padding: 4rem;
-  background-color: var(--background-light);
   cursor: pointer;
+  background-color: var(--background-light);
 }
 
 .menu-item:hover {
@@ -161,8 +161,8 @@ button {
 }
 
 .menu-item p {
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 /* Contact page */
@@ -170,13 +170,13 @@ button {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .contact p {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .contact img {
@@ -188,9 +188,9 @@ button {
 .footer {
   width: 100%;
   padding: 1rem;
+  text-align: center;
   background-color: var(--background-light);
   border-top: 1px solid var(--border-color);
-  text-align: center;
 }
 
 @media (max-width: 650px) {
