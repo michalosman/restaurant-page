@@ -75,7 +75,17 @@ function createFooter() {
 
   const copyright = document.createElement("p");
   copyright.textContent = "Copyright © 2021 michalosman";
+
+  const githubLink = document.createElement("a");
+  githubLink.href = "https://github.com/michalosman";
+
+  const githubIcon = document.createElement("i");
+  githubIcon.classList.add("fab");
+  githubIcon.classList.add("fa-github");
+
+  githubLink.appendChild(githubIcon);
   footer.appendChild(copyright);
+  footer.appendChild(githubLink);
 
   return footer;
 }

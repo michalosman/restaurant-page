@@ -1,5 +1,6 @@
 :root {
   --font-color: #eee;
+  --font-color-dark: #aaa;
   --border-color: #222;
   --background-light: rgba(0, 0, 0, 0.6);
   --background-light-hover: rgba(99, 99, 99, 0.4);
@@ -38,6 +39,15 @@ h1,
 h2,
 h3 {
   line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a:hover {
+  color: var(--font-color-dark);
 }
 
 img {
@@ -190,11 +200,19 @@ button {
 /* Footer */
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 1rem;
   text-align: center;
   background-color: var(--background-light);
   border-top: 1px solid var(--border-color);
+}
+
+.fab {
+  margin-left: 1rem;
+  font-size: 2rem;
 }
 
 /* Scrollbar */
