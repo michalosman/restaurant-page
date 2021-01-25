@@ -146,6 +146,7 @@ button {
   padding: 4rem;
   cursor: pointer;
   background-color: var(--background-light);
+  transition: 0.3s;
 }
 
 .menu-item:hover {
