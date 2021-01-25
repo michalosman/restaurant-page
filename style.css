@@ -101,7 +101,7 @@ button {
 /* Main */
 
 .main {
-  max-width: 900px;
+  max-width: 700px;
   padding: 4rem;
   border: 1px solid var(--border-color);
   margin: 6rem 0;
@@ -142,6 +142,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 300px;
   padding: 4rem;
   background-color: var(--background-light);
   cursor: pointer;
@@ -157,7 +158,6 @@ button {
 
 .menu-item h2 {
   padding: 2rem;
-  font-size: 3rem;
 }
 
 .menu-item p {
@@ -168,17 +168,19 @@ button {
 /* Contact page */
 
 .contact {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact p {
+  width: 100%;
   padding: 2rem;
-  text-align: justify;
 }
 
 .contact img {
   padding: 2rem;
-  width: 90%;
 }
 
 /* Footer */
