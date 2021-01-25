@@ -87,7 +87,7 @@ button {
   font-size: 2rem;
   background-color: transparent;
   border-bottom: 2px solid transparent;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .button-nav.active {
@@ -116,6 +116,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s;
 }
 
 .home p {
@@ -135,6 +136,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
+  animation: fadeIn 1s;
 }
 
 .menu-item {
@@ -146,7 +148,7 @@ button {
   padding: 4rem;
   cursor: pointer;
   background-color: var(--background-light);
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .menu-item:hover {
@@ -173,6 +175,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s;
 }
 
 .contact p {
@@ -181,7 +184,7 @@ button {
 }
 
 .contact img {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Footer */
@@ -192,22 +195,6 @@ button {
   text-align: center;
   background-color: var(--background-light);
   border-top: 1px solid var(--border-color);
-}
-
-@media (max-width: 650px) {
-  .menu {
-    grid-template-columns: 1fr;
-  }
-
-  .menu img {
-    width: 50%;
-  }
-}
-
-@media (max-width: 500px) {
-  html {
-    font-size: 50%;
-  }
 }
 
 /* Scrollbar */
@@ -226,4 +213,34 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #444;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 650px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .menu img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
 }
