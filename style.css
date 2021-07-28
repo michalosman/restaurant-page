@@ -192,6 +192,7 @@ button {
 }
 
 .contact img {
+  max-height: 420px;
   padding: 1rem;
   opacity: 90%;
 }
