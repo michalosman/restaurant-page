@@ -7,8 +7,6 @@
   --background-dark: rgba(0, 0, 0, 0.9);
 }
 
-/* General */
-
 *,
 *::before,
 *::after {
@@ -23,10 +21,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", cursive;
+  font-family: 'Montserrat', cursive;
   font-size: 1.6rem;
   color: var(--font-color);
-  background-image: url("images/background.jpg");
+  background-image: url('images/background.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -44,10 +42,6 @@ h3 {
 a {
   text-decoration: none;
   color: var(--font-color);
-}
-
-a:hover {
-  color: var(--font-color-dark);
 }
 
 img {
@@ -88,7 +82,7 @@ button {
 
 .restaurant-name {
   margin-bottom: 1rem;
-  font-family: "Tangerine", cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 10rem;
 }
 
@@ -126,6 +120,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 525px;
+  width: 618px;
   animation: fadeIn 1.5s;
 }
 
@@ -185,6 +181,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 525px;
+  width: 618px;
   animation: fadeIn 1.5s;
 }
 
@@ -204,16 +202,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   width: 100%;
   padding: 1rem;
-  text-align: center;
-  background-color: var(--background-light);
   border-top: 1px solid var(--border-color);
+  background-color: var(--background-light);
 }
 
-.fab {
-  margin-left: 1rem;
+.fa-github {
   font-size: 2rem;
+}
+
+.fa-github:hover {
+  color: var(--font-color-dark);
 }
 
 /* Scrollbar */
@@ -248,7 +249,13 @@ button {
 
 /* Media queries */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
+  .home,
+  .contact {
+    height: 100%;
+    width: 100%;
+  }
+
   .menu {
     grid-template-columns: 1fr;
   }
@@ -260,6 +267,10 @@ button {
 
 @media (max-width: 500px) {
   html {
-    font-size: 50%;
+    font-size: 57.5%;
+  }
+
+  .home img {
+    width: 80%;
   }
 }
