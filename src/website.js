@@ -77,7 +77,7 @@ function createFooter() {
   footer.classList.add("footer");
 
   const copyright = document.createElement("p");
-  copyright.textContent = "Copyright © 2021 michalosman";
+  copyright.textContent = `Copyright © ${new Date().getFullYear()} michalosman`;
 
   const githubLink = document.createElement("a");
   githubLink.href = "https://github.com/michalosman";
